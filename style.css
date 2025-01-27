@@ -14,7 +14,6 @@ header{
     height: 100vh;
     background-size: cover;
     background-position: center;
-    position: relative;
 }
 
 #about{
@@ -81,6 +80,15 @@ img {
     #about {
         padding: 24px;
         margin: 10px;
+    }
+
+    header{
+
+     background-image: url(./assets/background-2.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
     }
 
     #about h2 {
