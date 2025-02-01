@@ -1,111 +1,263 @@
+/* General Styles */
 body {
-    height: 100vh;
-    font-family:Verdana, sans-serif;
-  }
-
-*{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    overflow-x: hidden;
+    color: #fff;
+    background: linear-gradient(135deg, #00085b, #99d8ff);
+  }
 
-header{
-    background-image: url(./assets/background.jpg);
+  /* Navigation Bar */
+  .navbar {
+    background: linear-gradient(135deg, #00085b4b , #99d8ff6d);
+  }
+  
+  /* Hero Section */
+  .hero-section {
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-#about{
-    background-color: white;
-    width: fit-content;
-    height: fit-content;
-    margin-top: 10%;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: auto;
-}
-.pfp {
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeIn 2.3s ease-in-out;
+  }
+  
+  .btn-hero {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 100px 0;
+    background: #0000002b;
+    backdrop-filter: blur(10px);
+    box-shadow: black 0.5px 0.5px 40px ;
+  }
+  
+  .profile-img {
     width: 250px;
     height: 250px;
-    border-radius: 100%;
-    border: 4px solid #3b0076;
-}
-
-#about h2{
-   color: #3b0076;
-   font-size: 40px;
-   padding: 25px;
-}
-p{
-    padding: 30px;
-    font-size: 25px;
-    width: fit-content;
-
-}
-
-
-#about .contact-me {
-    background-image: linear-gradient(to right,#ba1fc0, #3b0076);
-    width: 280px;
-    height: 55px;
+    border-radius: 50%;
+    border: 3px solid #ffb406;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section-text {
+    font-size: 18px;
+    line-height: 2;
+  }
+  
+  /* Portfolio Section */
+  .portfolio-section {
+    padding: 100px 0;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 2px solid #ffa8068e;
+    box-shadow: 0.5px 0.5px 40px #0000004e;
+  }
+  
+  .portfolio-item img {
+    transition: transform 0.4s ease-in-out;   
+  }
+  
+  .portfolio-item:hover img {
+    transform: scale(1.5);
+  }
+  
+  .portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000423b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+  
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 100px 0;
+    backdrop-filter: blur(10px);
+  }
+  
+  .contact-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
     border: none;
-    border-radius: 15px;
-}
-#about a{
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-}
-#contact {
-    color: #3b0076;
-    font-size: 40px;
-    padding: 25px;
+    color: #fff;
+  }
+  
+  .contact-form .form-control::placeholder {
+    color: #ccc;
+  }
+  
+  /* General Button Styles */
+.btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(135deg, #762f00, #fbecbd);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Hover Effect */
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Button Click Animation */
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Ripple Effect */
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: #ffffff4d;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+  }
+  
+  .btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
+  /* Hero Button Specific Styles */
+  .btn-hero {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #762f00, #fbecbd);
+    color: #fff;
+    border: 2px solid #ffb406;
+  }
+  
+  .btn-hero:hover {
+    border-color: #ffb406;
+  }
+  
+  /* Portfolio Button Specific Styles */
+  .portfolio-overlay .btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #762f00, #fbecbd);
+    color: #fff;
+    border: 2px solid #ffb406;
+  }
+  
+  .portfolio-overlay .btn:hover {
+
+    border-color: #ffb406;
+  }
+  
+  /* Contact Form Button Specific Styles */
+  .contact-form .btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #762f00, #fbecbd);
+    color: #fff;
+    border: 2px solid #ffb406;
+  }
+  
+  .contact-form .btn:hover {
+    border-color: #ffb406;
+  }
+
+  /* Footer */
+  footer {
+    background: #000016f5;
+    padding: 10px 0px;
     text-align: center;
-}
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
 
-#Portfolio{
-    color: #3b0076;
-    font-size: 40px;
-    padding: 25px;
-    text-align: center;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 16px;
-}
-
-@media (max-width: 768px) {
-    #about {
-        padding: 24px;
-        margin: 10px;
+  @media (max-width: 576px) {
+    .hero-title {
+      font-size: 2rem;
     }
-
-    header{
-
-     background-image: url(./assets/background-2.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-
+  
+    .hero-subtitle {
+      font-size: 0.9rem;
     }
-
-    #about h2 {
-        font-size: 29px;
-        margin: 10px;
+  
+    .btn-hero {
+      font-size: 0.8rem;
+      padding: 8px 20px;
     }
-
-    #about p {
-        font-size: 16px;
-        margin: 0;
+  
+    .profile-img {
+      width: 120px;
+      height: 120px;
     }
-    button a {
-        font-size: 15px;
-        margin: 30px;
+  
+    .section-title {
+      font-size: 1.5rem;
     }
-
-    footer {
-        font-size: 15px;
+  
+    .section-text {
+      font-size: 0.8rem;
     }
-}
+  
+    .portfolio-section, .contact-section {
+      padding: 20px 20px;
+    }
+  
+    .portfolio-item {
+      margin-bottom: 10px;
+    }
+  }
