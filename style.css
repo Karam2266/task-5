@@ -8,11 +8,11 @@ body {
     background: linear-gradient(135deg, #00085b, #99d8ff);
   }
 
-  /* Navigation Bar */
-  .navbar {
-    background: linear-gradient(135deg, #00085b4b , #99d8ff6d);
-  }
-  
+ /* Navigation Bar */
+.navbar {
+  background: linear-gradient(135deg, #00085b4b, #99d8ff6d);
+
+}
   /* Hero Section */
   .hero-section {
     height: 100vh;
@@ -52,9 +52,46 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
     border: 3px solid #ffb406;
-  }
-  
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 25px rgba(255, 180, 6, 0.4);
+}
+
+.profile-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 180, 6, 0.1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.profile-img:hover::before {
+    opacity: 1;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.profile-img:hover img {
+    transform: scale(1.1);
+}
+
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -73,6 +110,7 @@ body {
   .portfolio-item {
     position: relative;
     overflow: hidden;
+    transition: all 0.4s ease-in-out;
     border-radius: 25px;
     border: 2px solid #ffa8068e;
     box-shadow: 0.5px 0.5px 40px #0000004e;
@@ -249,3 +287,5 @@ body {
       margin-bottom: 10px;
     }
   }
+  
+  
