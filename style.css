@@ -21,7 +21,7 @@ body {
     border-radius: 20px;
     border: solid 1.5px #cbcbcb;
     font-size: 20px;
-    z-index: 1000;
+    z-index: 100;
 }
 
 /* Hero Section */
@@ -314,7 +314,31 @@ footer {
 
 
 @media (max-width: 576px) {
- 
+.navbar{
+  width: 100%;
+  position: relative;
+  top: 10px;
+  margin-bottom: 30px;
+}
+.skills {
+  margin-bottom: 300px;
+  padding: 0px 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.skills h2 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.skills img {
+  width: 40px;
+}
+.hero-subtitle{
+  margin: 2px 10px; 
+}
+
 .profile-img {
     width: 200px;
     height: 200px;
