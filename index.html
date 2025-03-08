@@ -32,8 +32,8 @@
       <source src="./assets/video.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
-      <h1 class="hero-title">Welcome to My Portfolio</h1>
-      <p class="hero-subtitle">Crafting Digital Experiences with Passion</p>
+      <h1 class="hero-title" style="font-weight: bold;">Welcome to My Portfolio</h1>
+      <p class="hero-subtitle" style="color: #d5d5d5;">Crafting Digital Experiences with Passion</p>
       <a href="#about" class="btn btn-primary btn-hero">Explore More</a>
       <div class="skills">
         <h2>MY SKILLS</h2>
@@ -49,20 +49,18 @@
 
   <!-- About Section -->
   <section id="about" class="about-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
+    <div class="about-container">
+        <div>
           <img src="./assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
         </div>
-        <div class="col-md-6">
-          <h2 class="section-title" style="font-weight: bold;">Hi, I'M KARAM </h2>
-          <p class="section-text" style="font-size: 20px; color: rgb(211, 211, 211);">
+        <div class="about-desc">
+          <h2 class="about-h2">Hi, I'M KARAM </h2>
+          <p class="about-text">
            I am a 20-year-old engineering student with a strong passion for web development. I specialize in building responsive and user-friendly websites using modern technologies such as HTML, CSS, JavaScript, and Bootstrap. Over the past few years, I have gained hands-on experience in designing and coding interactive interfaces that bring ideas to life.
           </p>
-          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <a href="#contact" class="btn">Contact Me</a>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- Portfolio Section -->
@@ -73,7 +71,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="row">
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 1.png" class="card-img-top" alt="Project 1">
               <div class="card-body">
@@ -86,7 +84,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 2.png" class="card-img-top" alt="Project 2">
               <div class="card-body">
@@ -99,7 +97,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 3.png" class="card-img-top" alt="Project 3">
               <div class="card-body">
@@ -112,7 +110,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 4.png" class="card-img-top" alt="Project 4">
               <div class="card-body">
@@ -131,7 +129,7 @@
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="row">
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 5.png" class="card-img-top" alt="Project 5">
               <div class="card-body">
@@ -144,7 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 6.png" class="card-img-top" alt="Project 6">
               <div class="card-body">
@@ -157,7 +155,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 7.png" class="card-img-top" alt="Project 7">
               <div class="card-body">
@@ -170,7 +168,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div id="p-card" class="col-sm-6 col-md-3">
             <div class="card">
               <img src="./assets/project 8.png" class="card-img-top" alt="Project 8">
               <div class="card-body">
@@ -189,11 +187,11 @@
     </div>
 
     <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev" style="width: 5%;">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next" style="width: 5%;">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -221,7 +219,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <div class="footer-container">
